@@ -53,7 +53,8 @@ features, targets = data.drop(target_fields, axis=1), data[target_fields]
 test_features, test_targets = test_data.drop(target_fields, axis=1), test_data[target_fields]
 
 
-# We'll split the data into two sets, one for training and one for validating as the network is being trained. Since this is time series data, we'll train on historical data, then try to predict on future data (the validation set).
+# We'll split the data into two sets, one for training and one for validating as the network is being trained. 
+# Since this is time series data, we'll train on historical data, then try to predict on future data (the validation set).
 # Hold out the last 60 days or so of the remaining data as a validation set
 train_features, train_targets = features[:-60*24], targets[:-60*24]
 val_features, val_targets = features[-60*24:], targets[-60*24:]
