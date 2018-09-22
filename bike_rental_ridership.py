@@ -60,7 +60,7 @@ val_features, val_targets = features[-60*24:], targets[-60*24:]
 
 
 # Build the network
-from my_answers import NeuralNetwork
+from neural_network import NeuralNetwork
 def MSE(y, Y):
     return np.mean((y-Y)**2)
 
@@ -132,7 +132,7 @@ import sys
 ####################
 ### Set the hyperparameters in you myanswers.py file ###
 ####################
-from my_answers import iterations, learning_rate, hidden_nodes, output_nodes
+from neural_network import iterations, learning_rate, hidden_nodes, output_nodes
 
 
 N_i = train_features.shape[1]
